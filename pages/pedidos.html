@@ -39,71 +39,84 @@
       <p class="lead">Completá el siguiente formulario para hacer tu compra.</p>
     </section>
 
-    <form class="row g-4">
-      <div class="col-md-6">
-        <label for="nombre" class="form-label">Nombre completo</label>
-        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
-      </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <form class="row g-4 border rounded p-4 bg-light shadow">
+          <div class="col-md-6">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Ej: Juan Pérez">
+          </div>
 
-      <div class="col-md-6">
-        <label for="correo" class="form-label">Correo electrónico</label>
-        <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: ejemplo@gmail.com">
-      </div>
+          <div class="col-md-6">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" name="correo" placeholder="Ej: ejemplo@gmail.com">
+          </div>
 
-      <div class="col-md-6">
-        <label for="direccion" class="form-label">Dirección de envío</label>
-        <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Calle, número, ciudad">
-      </div>
+          <div class="col-md-8">
+            <label for="direccion" class="form-label">Dirección de envío</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" placeholder="Calle, número, ciudad">
+          </div>
 
-      <div class="col-md-3">
-        <label for="producto" class="form-label">Producto</label>
-        <select class="form-select" id="producto" name="producto">
-          <option value="">Elegí un producto</option>
-          <option value="eva01">Remera EVA 01</option>
-          <option value="berserker">Remera EVA 01 Berserker</option>
-        </select>
-      </div>
+          <div class="col-md-4">
+            <label for="telefono" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Ej: 3512345678">
+          </div>
 
-      <div class="col-md-3">
-        <label for="cantidad" class="form-label">Cantidad</label>
-        <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Ej: 1">
-      </div>
+          <div class="col-md-4">
+            <label for="producto" class="form-label">Producto</label>
+            <select class="form-select" id="producto" name="producto">
+              <option value="">Elegí un producto</option>
+              <option value="eva01">Remera EVA 01</option>
+              <option value="berserker">Remera EVA 01 Berserker</option>
+              <option value="eva02">Remera EVA 02 Asuka</option>
+              <option value="kaworu">Remera Kaworu</option>
+            </select>
+          </div>
 
-      <div class="col-md-3">
-        <label for="talla" class="form-label">Talla</label>
-        <select class="form-select" id="talla" name="talla">
-          <option value="">Seleccioná una talla</option>
-          <option>XS</option>
-          <option>S</option>
-          <option>M</option>
-          <option>L</option>
-          <option>XL</option>
-          <option>XXL</option>
-        </select>
-      </div>
+          <div class="col-md-2">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Ej: 1">
+          </div>
 
-      <div class="col-md-3">
-        <label for="color" class="form-label">Color</label>
-        <select class="form-select" id="color" name="color">
-          <option>Negro</option>
-          <option>Blanco</option>
-          <option>Gris</option>
-        </select>
-      </div>
+          <div class="col-md-3">
+            <label for="talla" class="form-label">Talla</label>
+            <select class="form-select" id="talla" name="talla">
+              <option value="">Seleccioná una talla</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+          </div>
 
-      <div class="col-12">
-        <label for="comentarios" class="form-label">Comentarios adicionales</label>
-        <textarea class="form-control" id="comentarios" name="comentarios" rows="4" placeholder="Dejá tus observaciones..."></textarea>
-      </div>
+          <div class="col-md-3">
+            <label for="color" class="form-label">Color</label>
+            <select class="form-select" id="color" name="color">
+              <option>Negro</option>
+              <option>Blanco</option>
+              <option>Gris</option>
+            </select>
+          </div>
 
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary w-100">Enviar Pedido</button>
+          <div class="col-12">
+            <label for="comentarios" class="form-label">Comentarios adicionales</label>
+            <textarea class="form-control" id="comentarios" name="comentarios" rows="4" placeholder="Dejá tus observaciones..."></textarea>
+          </div>
+
+          <div class="col-12 text-end">
+            <button type="submit" class="btn btn-primary px-4">Enviar Pedido</button>
+          </div>
+        </form>
       </div>
-    </form>
+    </div>
   </main>
 
-  <footer class="footer-main bg-dark text-white text-center py-3">
-    <p class="mb-0">Contacto: arataproto@gmail.com</p>
+  <footer class="footer-main bg-dark text-white text-center py-4">
+    <div class="container">
+      <p class="mb-0">Contacto: arataproto@gmail.com</p>
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
