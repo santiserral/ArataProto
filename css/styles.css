@@ -1,28 +1,41 @@
+/* Variables y fuentes */
 :root {
   --primary-color: #6c63ff;
   --dark-bg: #111;
   --light-bg: #f4f4f4;
   --contrast: #ffffff;
+  --accent-color: #ff4081;
+  --font-main: 'Segoe UI', sans-serif;
 }
 
+/* Reset y base */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: var(--font-main);
   background-color: var(--light-bg);
   color: #333;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
 }
 
+a:hover {
+  color: var(--primary-color);
+}
+
+/* Header */
 .header-main h1 {
   font-size: 2.5rem;
   font-weight: bold;
 }
 
+/* Footer */
 .footer-main {
   background-color: #222;
   color: #fff;
@@ -30,6 +43,7 @@ a {
   padding: 1rem;
 }
 
+/* Fondo principal */
 .background-image {
   background-image: url("../media/background-image.png");
   background-size: cover;
@@ -39,4 +53,68 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Fondo para productos */
+.background-image-products {
+  background-color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tarjetas de productos */
+.product-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadein {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.animate-fadein.delay-1 {
+  animation-delay: 0.3s;
+}
+
+/* Formulario */
+form input, form select, form textarea {
+  border-radius: 0.375rem;
+}
+
+form button[type="submit"] {
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .background-image {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .background-image h2,
+  .background-image p {
+    font-size: 1.2rem;
+  }
 }
